@@ -3,8 +3,8 @@ import Header from "./Template";
 
 import "../view/Template.css";
 
-function Home() {
-  const title = "AMAURY BILLET";
+function AboutMe() {
+  const title = "About Me";
 
   return (
     <div>
@@ -13,4 +13,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default AboutMe;
