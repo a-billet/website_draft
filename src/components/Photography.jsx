@@ -1,6 +1,6 @@
 import React from "react";
 import background from "../resources/pictures/IMG_7952.JPG";
-import Header from "./Template";
+import Header from "./Header";
 
 import "../view/Template.css";
 

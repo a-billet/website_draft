@@ -3,11 +3,9 @@ import "../view/Template.css";
 
 function Header(props) {
   return (
-    <div>
-      <header className="Header">
-        <h1> {props.title} </h1>
-      </header>
-    </div>
+    <header className="header">
+      <h1> {props.title} </h1>
+    </header>
   );
 }
 

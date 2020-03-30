@@ -1,9 +1,17 @@
-.Home {
-  text-align: left;
+.home-page .input-wrapper {
+  padding: 10px;
 }
 
-.Header {
-  background-color: #282c34;
+.home-page .input-wrapper input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.header {
+  background-color: #708da8;
   min-height: 8vh;
   display: flex;
   flex-direction: column;
@@ -11,6 +19,20 @@
   justify-content: center;
   font-size: calc(7px + 2vmin);
   color: white;
+}
+
+.page-content {
+  min-height: 150vh;
+  background-color: #9abde048;
+  justify-content: center;
+}
+
+.home-button {
+  position: relative !important;
+  padding: 10px 8px 10px 8px;
+  color: rgb(102, 99, 99) !important;
+  background: transparent;
+  border-radius: 3px;
 }
 
 .Galery {
