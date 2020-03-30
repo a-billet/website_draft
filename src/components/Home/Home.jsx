@@ -1,15 +1,15 @@
 import { Button } from "reactstrap";
 import React from "react";
-import Header from "./Header";
-import "../view/Template.css";
-import history from "./../history";
+import Header from "../Header/Header";
+import "./Home.css";
+import history from "../../history";
 
 function Home() {
   const title = "AMAURY BILLET";
 
   return (
     <div className="home-page">
-      <Header title={title} />
+      <Header title={title} link={"/Home"} />
       <div className="page-content">
         <Button
           variant="contained"

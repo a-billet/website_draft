@@ -1,7 +1,5 @@
 import React from "react";
-import Header from "./Header";
-
-import "../view/Template.css";
+import Header from "../Header/Header";
 
 function AboutMe() {
   const title = "About Me";

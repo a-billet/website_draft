@@ -1,0 +1,25 @@
+.home-page .input-wrapper {
+  padding: 10px;
+}
+
+.home-page .input-wrapper input {
+  width: 100%;
+  padding: 8px;
+  box-sizing: border-box;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.page-content {
+  min-height: 150vh;
+  background-color: #bbb6b65e;
+  justify-content: center;
+}
+
+.home-button {
+  position: relative !important;
+  padding: 10px 8px 10px 8px;
+  color: rgb(102, 99, 99) !important;
+  background: transparent;
+  border-radius: 3px;
+}
