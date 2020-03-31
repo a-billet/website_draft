@@ -11,9 +11,11 @@
 }
 
 .page-content {
-  min-height: 150vh;
+  min-height: 80vh;
   background-color: #bbb6b65e;
+  display: flex;
   justify-content: center;
+  padding: 50;
 }
 
 .home-button {
@@ -22,4 +24,7 @@
   color: rgb(102, 99, 99) !important;
   background: transparent;
   border-radius: 3px;
+  font-size: xx-large;
+  margin-right: 30px;
+  margin-left: 30px;
 }

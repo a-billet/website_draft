@@ -1,5 +1,6 @@
-.page-content {
-  min-height: 150vh;
+.Galery {
+  min-height: 100vh;
   background-color: #bbb6b65e;
-  justify-content: center;
+  justify-content: space-around;
+  resize: horizontal;
 }

@@ -1,5 +1,6 @@
 import React from "react";
-import background from "../../resources/pictures/IMG_7952.JPG";
+import picture1 from "../../resources/pictures/IMG_7952.JPG";
+import picture2 from "../../resources/pictures/IMG_7952.JPG";
 import Header from "../Header/Header";
 
 import "./Photography.css";
@@ -8,9 +9,12 @@ function Photography() {
   const title = "Photography";
 
   return (
-    <div>
+    <div className>
       <Header title={title} link="/Photography" />
-      <img src={background} className="Galery" />
+      <div className="Galery">
+        <img src={picture1} />
+        <img src={picture2} />
+      </div>
     </div>
   );
 }

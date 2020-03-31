@@ -1,6 +1,5 @@
 import React from "react";
 import "./Header.css";
-import { Button } from "reactstrap";
 import history from "../../history";
 
 function Header(props) {

@@ -13,15 +13,14 @@
   justify-content: right;
 }
 
+.btn-space {
+  margin-right: 5px;
+}
+
 .page-content {
   min-height: 150vh;
   background-color: #bbb6b65e;
   justify-content: center;
-}
-
-.Galery {
-  width: 100vmin;
-  resize: inherit;
 }
 
 .Home-link {
