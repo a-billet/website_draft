@@ -11,12 +11,14 @@ const images = [
   {
     url: "../resources/icons/photo_icon.jpg",
     title: "Photography",
-    width: "50%"
+    width: "50%",
+    root: "/Photography"
   },
   {
     url: "../resources/icons/aboutme_icon.jpg",
     title: "About Me",
-    width: "50%"
+    width: "50%",
+    root: "/AboutMe"
   }
 ];
 
@@ -111,7 +113,7 @@ function Home() {
             style={{
               width: image.width
             }}
-            onClick={() => changePage(image.title)}
+            onClick={() => history.push(image.root)}
           >
             <span
               className={classes.imageSrc}
@@ -136,15 +138,6 @@ function Home() {
       </div>
     </div>
   );
-}
-
-function changePage(title) {
-  console.log(title);
-  if (title === "Photography") {
-    history.push("/Photography");
-  } else if (title === "About Me") {
-    history.push("/AboutMe");
-  }
 }
 
 export default Home;

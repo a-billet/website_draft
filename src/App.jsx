@@ -11,6 +11,7 @@ class App extends Component {
       <Router history={history}>
         <Switch>
           <Route path="/" exact component={Home} />
+          <Route path="/Home" exact component={Home} />
           <Route path="/AboutMe" component={AboutMe} />
           <Route path="/Photography" component={Photography} />
         </Switch>
