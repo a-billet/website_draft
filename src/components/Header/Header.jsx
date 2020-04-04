@@ -13,12 +13,19 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import ListItemIcon from "@material-ui/core/ListItemIcon";
 import ListItemText from "@material-ui/core/ListItemText";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogContentText from "@material-ui/core/DialogContentText";
+import DialogTitle from "@material-ui/core/DialogTitle";
 
 import MenuIcon from "@material-ui/icons/Menu";
 import HomeIcon from "@material-ui/icons/Home";
 import PhotoCameraIcon from "@material-ui/icons/PhotoCamera";
 import FaceSharpIcon from "@material-ui/icons/FaceSharp";
 import GroupAddSharpIcon from "@material-ui/icons/GroupAddSharp";
+import InstagramIcon from "@material-ui/icons/Instagram";
+import LinkedInIcon from "@material-ui/icons/LinkedIn";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -44,6 +51,16 @@ function Header(props) {
     bottom: false,
     right: false
   });
+
+  const [open, setOpen] = React.useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = () => {
+    setOpen(false);
+  };
 
   const toggleDrawer = (anchor, open) => event => {
     if (
@@ -87,7 +104,7 @@ function Header(props) {
           </ListItemIcon>
           <ListItemText primary="About Me" />
         </ListItem>
-        <ListItem button onClick={() => history.push("/AboutMe")}>
+        <ListItem button onClick={handleClickOpen}>
           <ListItemIcon>
             <GroupAddSharpIcon />
           </ListItemIcon>
@@ -118,6 +135,36 @@ function Header(props) {
             >
               {list(anchor)}
             </Drawer>
+            <Dialog
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="alert-dialog-title"
+              aria-describedby="alert-dialog-description"
+            >
+              <DialogTitle id="alert-dialog-title">{"Contact"}</DialogTitle>
+              <DialogContent>
+                <DialogContentText id="alert-dialog-description">
+                  billet.amaury@gmail.com
+                </DialogContentText>
+              </DialogContent>
+              <DialogActions>
+                <Divider />
+                <IconButton
+                  aria-label="instagram"
+                  target="_blank"
+                  href="https://www.instagram.com/amaury_billet"
+                >
+                  <InstagramIcon />
+                </IconButton>
+                <IconButton
+                  aria-label="linkedin"
+                  target="_blank"
+                  href="https://www.linkedin.com/in/amaury-billet-b1905a87"
+                >
+                  <LinkedInIcon />
+                </IconButton>
+              </DialogActions>
+            </Dialog>
             <Typography variant="h6" color="inherit">
               {props.title}
             </Typography>

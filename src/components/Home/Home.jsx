@@ -10,14 +10,16 @@ import history from "../../history";
 const images = [
   {
     url: "../resources/icons/photo_icon.jpg",
-    title: "Photography",
+    title: "PHOTOGRAPHY",
     width: "50%",
+    height: "100%",
     root: "/Photography"
   },
   {
     url: "../resources/icons/aboutme_icon.jpg",
-    title: "About Me",
+    title: "ABOUT ME",
     width: "50%",
+    height: "100%",
     root: "/AboutMe"
   }
 ];
