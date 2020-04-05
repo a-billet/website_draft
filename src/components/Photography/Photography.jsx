@@ -1,32 +1,36 @@
 import React from "react";
-import picture1 from "../../resources/pictures/IMG_7952.JPG";
-import picture2 from "../../resources/pictures/IMG_7952.JPG";
 import Header from "../Header/Header";
 import { makeStyles } from "@material-ui/core/styles";
 
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import history from "../../history";
+import VoyageBackground from "../../resources/IMG_7952.JPG";
+import Portraitground from "../../resources/IMG_5458.JPG";
+import WildlifeBackground from "../../resources/IMG_2434.jpg";
 
 import "./Photography.css";
 
 const images = [
   {
-    url: "../resources/icons/photo_icon.jpg",
+    url: `url(${VoyageBackground})`,
     title: "VOYAGE",
     width: "33.33%",
+    height: "93vh",
     root: "/Trip"
   },
   {
-    url: "../resources/icons/aboutme_icon.jpg",
+    url: `url(${Portraitground})`,
     title: "PORTRAIT",
     width: "33.33%",
+    height: "93vh",
     root: "/Portrait"
   },
   {
-    url: "../resources/icons/aboutme_icon.jpg",
+    url: `url(${WildlifeBackground})`,
     title: "WILDLIFE",
     width: "33.33%",
+    height: "93vh",
     root: "/Wildlife"
   }
 ];
@@ -110,7 +114,7 @@ function Photography() {
   const classes = useStyles();
 
   return (
-    <div className="home-page">
+    <div className={classes.root}>
       <Header title={title} />
       <div className={classes.root}>
         {images.map(image => (
@@ -120,14 +124,15 @@ function Photography() {
             className={classes.image}
             focusVisibleClassName={classes.focusVisible}
             style={{
-              width: image.width
+              width: image.width,
+              height: image.height
             }}
             onClick={() => history.push(image.root)}
           >
             <span
               className={classes.imageSrc}
               style={{
-                backgroundImage: `url(${image.url})`
+                backgroundImage: image.url
               }}
             />
             <span className={classes.imageBackdrop} />

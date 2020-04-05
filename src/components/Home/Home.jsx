@@ -1,25 +1,26 @@
-import { Button } from "reactstrap";
 import { makeStyles } from "@material-ui/core/styles";
 import React from "react";
 import Header from "../Header/Header";
 import "./Home.css";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
+import LeftBackground from "../../resources/HOME_left.jpg";
+import RightBackground from "../../resources/HOME_right.jpg";
 import history from "../../history";
 
 const images = [
   {
-    url: "../resources/icons/photo_icon.jpg",
+    url: `url(${LeftBackground})`,
     title: "PHOTOGRAPHY",
     width: "50%",
-    height: "100%",
+    height: "93vh",
     root: "/Photography"
   },
   {
-    url: "../resources/icons/aboutme_icon.jpg",
+    url: `url(${RightBackground})`,
     title: "ABOUT ME",
     width: "50%",
-    height: "100%",
+    height: "93vh",
     root: "/AboutMe"
   }
 ];
@@ -103,7 +104,7 @@ function Home() {
   const classes = useStyles();
 
   return (
-    <div className="home-page">
+    <div className={classes.root}>
       <Header title={title} />
       <div className={classes.root}>
         {images.map(image => (
@@ -113,14 +114,15 @@ function Home() {
             className={classes.image}
             focusVisibleClassName={classes.focusVisible}
             style={{
-              width: image.width
+              width: image.width,
+              height: image.height
             }}
             onClick={() => history.push(image.root)}
           >
             <span
               className={classes.imageSrc}
               style={{
-                backgroundImage: `url(${image.url})`
+                backgroundImage: image.url
               }}
             />
             <span className={classes.imageBackdrop} />

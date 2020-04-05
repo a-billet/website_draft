@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../Header/Header";
 
 function Potrait() {
-  const title = "Portrait";
+  const title = "PORTRAIT";
   return <Header title={title}></Header>;
 }
 
