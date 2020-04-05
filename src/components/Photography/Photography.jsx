@@ -17,21 +17,21 @@ const images = [
     title: "VOYAGE",
     width: "33.33%",
     height: "93vh",
-    root: "/Trip"
+    route: "/voyage"
   },
   {
     url: `url(${Portraitground})`,
     title: "PORTRAIT",
     width: "33.33%",
     height: "93vh",
-    root: "/Portrait"
+    route: "/portrait"
   },
   {
     url: `url(${WildlifeBackground})`,
     title: "WILDLIFE",
     width: "33.33%",
     height: "93vh",
-    root: "/Wildlife"
+    route: "/wildlife"
   }
 ];
 
@@ -127,7 +127,7 @@ function Photography() {
               width: image.width,
               height: image.height
             }}
-            onClick={() => history.push(image.root)}
+            onClick={() => history.push(image.route)}
           >
             <span
               className={classes.imageSrc}

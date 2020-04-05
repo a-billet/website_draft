@@ -14,14 +14,14 @@ const images = [
     title: "PHOTOGRAPHY",
     width: "50%",
     height: "93vh",
-    root: "/Photography"
+    route: "/photography"
   },
   {
     url: `url(${RightBackground})`,
     title: "ABOUT ME",
     width: "50%",
     height: "93vh",
-    root: "/AboutMe"
+    route: "/about"
   }
 ];
 
@@ -117,7 +117,7 @@ function Home() {
               width: image.width,
               height: image.height
             }}
-            onClick={() => history.push(image.root)}
+            onClick={() => history.push(image.route)}
           >
             <span
               className={classes.imageSrc}

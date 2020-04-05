@@ -83,7 +83,7 @@ function Header(props) {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List>
-        <ListItem button onClick={() => history.push("/Home")}>
+        <ListItem button onClick={() => history.push("/")}>
           <ListItemIcon>
             <HomeIcon />
           </ListItemIcon>
@@ -92,13 +92,13 @@ function Header(props) {
       </List>
       <Divider />
       <List>
-        <ListItem button onClick={() => history.push("/Photography")}>
+        <ListItem button onClick={() => history.push("/photography")}>
           <ListItemIcon>
             <PhotoCameraIcon />
           </ListItemIcon>
           <ListItemText primary="Photography" />
         </ListItem>
-        <ListItem button onClick={() => history.push("/AboutMe")}>
+        <ListItem button onClick={() => history.push("/about")}>
           <ListItemIcon>
             <FaceSharpIcon />
           </ListItemIcon>

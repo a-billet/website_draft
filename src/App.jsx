@@ -14,12 +14,11 @@ class App extends Component {
       <Router history={history}>
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/Home" exact component={Home} />
-          <Route path="/AboutMe" component={AboutMe} />
-          <Route path="/Photography" component={Photography} />
-          <Route path="/Trip" component={Trip} />
-          <Route path="/Wildlife" component={Wildlife} />
-          <Route path="/Portrait" component={Portrait} />
+          <Route path="/about" component={AboutMe} />
+          <Route path="/photography" component={Photography} />
+          <Route path="/voyage" component={Trip} />
+          <Route path="/wildlife" component={Wildlife} />
+          <Route path="/portrait" component={Portrait} />
         </Switch>
       </Router>
     );
