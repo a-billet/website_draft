@@ -1,6 +1,4 @@
-.Galery {
-  min-height: 100vh;
-  background-color: #bbb6b65e;
-  justify-content: space-around;
-  resize: horizontal;
+.galery {
+  background-color: #ffffffff;
+  display: "flex";
 }

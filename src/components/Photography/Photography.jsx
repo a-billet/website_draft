@@ -17,50 +17,49 @@ const images = [
     title: "VOYAGE",
     width: "33.33%",
     height: "93vh",
-    route: "/voyage"
+    route: "/voyage",
   },
   {
     url: `url(${Portraitground})`,
     title: "PORTRAIT",
     width: "33.33%",
     height: "93vh",
-    route: "/portrait"
+    route: "/portrait",
   },
   {
     url: `url(${WildlifeBackground})`,
     title: "WILDLIFE",
     width: "33.33%",
     height: "93vh",
-    route: "/wildlife"
-  }
+    route: "/wildlife",
+  },
 ];
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    minWidth: 300,
-    width: "100%"
+    width: "100%",
   },
   image: {
     position: "relative",
     height: 200,
     [theme.breakpoints.down("xs")]: {
       width: "100% !important", // Overrides inline-style
-      height: 100
+      height: 100,
     },
     "&:hover, &$focusVisible": {
       zIndex: 1,
       "& $imageBackdrop": {
-        opacity: 0.15
+        opacity: 0.15,
       },
       "& $imageMarked": {
-        opacity: 0
+        opacity: 0,
       },
       "& $imageTitle": {
-        border: "4px solid currentColor"
-      }
-    }
+        border: "4px solid currentColor",
+      },
+    },
   },
   focusVisible: {},
   imageButton: {
@@ -72,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   imageSrc: {
     position: "absolute",
@@ -81,7 +80,7 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     bottom: 0,
     backgroundSize: "cover",
-    backgroundPosition: "center 40%"
+    backgroundPosition: "center 40%",
   },
   imageBackdrop: {
     position: "absolute",
@@ -91,12 +90,13 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     backgroundColor: theme.palette.common.black,
     opacity: 0.4,
-    transition: theme.transitions.create("opacity")
+    transition: theme.transitions.create("opacity"),
   },
   imageTitle: {
     position: "relative",
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) +
-      6}px`
+    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
+      theme.spacing(1) + 6
+    }px`,
   },
   imageMarked: {
     height: 3,
@@ -105,8 +105,8 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     bottom: -2,
     left: "calc(50% - 9px)",
-    transition: theme.transitions.create("opacity")
-  }
+    transition: theme.transitions.create("opacity"),
+  },
 }));
 
 function Photography() {
@@ -117,7 +117,7 @@ function Photography() {
     <div className={classes.root}>
       <Header title={title} />
       <div className={classes.root}>
-        {images.map(image => (
+        {images.map((image) => (
           <ButtonBase
             focusRipple
             key={image.title}
@@ -125,14 +125,14 @@ function Photography() {
             focusVisibleClassName={classes.focusVisible}
             style={{
               width: image.width,
-              height: image.height
+              height: image.height,
             }}
             onClick={() => history.push(image.route)}
           >
             <span
               className={classes.imageSrc}
               style={{
-                backgroundImage: image.url
+                backgroundImage: image.url,
               }}
             />
             <span className={classes.imageBackdrop} />

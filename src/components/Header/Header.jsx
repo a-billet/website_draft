@@ -26,20 +26,21 @@ import FaceSharpIcon from "@material-ui/icons/FaceSharp";
 import GroupAddSharpIcon from "@material-ui/icons/GroupAddSharp";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
+import MailOutlineIcon from "@material-ui/icons/MailOutline";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
-    flexGrow: 1
+    flexGrow: 1,
   },
   menuButton: {
-    marginRight: theme.spacing(2)
+    marginRight: theme.spacing(2),
   },
   list: {
-    width: 250
+    width: 250,
   },
   fullList: {
-    width: "auto"
-  }
+    width: "auto",
+  },
 }));
 
 function Header(props) {
@@ -49,7 +50,7 @@ function Header(props) {
     top: false,
     left: false,
     bottom: false,
-    right: false
+    right: false,
   });
 
   const [open, setOpen] = React.useState(false);
@@ -62,7 +63,7 @@ function Header(props) {
     setOpen(false);
   };
 
-  const toggleDrawer = (anchor, open) => event => {
+  const toggleDrawer = (anchor, open) => (event) => {
     if (
       event.type === "keydown" &&
       (event.key === "Tab" || event.key === "Shift")
@@ -73,10 +74,10 @@ function Header(props) {
     setState({ ...state, [anchor]: open });
   };
 
-  const list = anchor => (
+  const list = (anchor) => (
     <div
       className={clsx(classes.list, {
-        [classes.fullList]: anchor === "top" || anchor === "bottom"
+        [classes.fullList]: anchor === "top" || anchor === "bottom",
       })}
       role="presentation"
       onClick={toggleDrawer(anchor, false)}
@@ -117,7 +118,7 @@ function Header(props) {
   return (
     <div className={classes.root}>
       <Toolbar variant="dense">
-        {["left"].map(anchor => (
+        {["left"].map((anchor) => (
           <React.Fragment key={anchor}>
             <IconButton
               edge="start"
@@ -142,13 +143,16 @@ function Header(props) {
               aria-describedby="alert-dialog-description"
             >
               <DialogTitle id="alert-dialog-title">{"Contact"}</DialogTitle>
-              <DialogContent>
+              {/* <DialogContent>
                 <DialogContentText id="alert-dialog-description">
                   billet.amaury@gmail.com
                 </DialogContentText>
-              </DialogContent>
+              </DialogContent> */}
               <DialogActions>
                 <Divider />
+                <IconButton aria-label="mail" target="_blank">
+                  <MailOutlineIcon />
+                </IconButton>
                 <IconButton
                   aria-label="instagram"
                   target="_blank"
