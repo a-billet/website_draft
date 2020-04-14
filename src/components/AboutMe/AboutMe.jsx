@@ -1,27 +1,35 @@
 import React from "react";
+import Typography from "@material-ui/core/Typography";
 import Header from "../Header/Header";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles({
+  root: {
+    width: "100%",
+    maxWidth: 500,
+  },
+  about: {
+    width: "100%",
+    maxWidth: 700,
+  },
+});
 
 function AboutMe() {
+  const classes = useStyles();
   const title = "About Me";
 
   return (
-    <div>
+    <div className={classes.root}>
       <Header title={title} />
-      <h1>Welcome to my website</h1>
-      <p>This site is mainly to present my photo galery</p>
-      <h1>Who am I</h1>
-      <h2>My life</h2>
-      <p>Write something about my life</p>
-      <h2>Photography</h2>
-      <p>
-        Write something about photography
-        <ul>
-          <li>item 1</li>
-          <li>item 2</li>
-        </ul>
-      </p>
-      <h2>Contact</h2>
-      <p>billet.amaury@gmail.com</p>
+      <div className={classes.about}>
+        <Typography variant="h5" gutterBottom>
+          Welcome to my website
+        </Typography>
+        <Typography variant="h5">Contact</Typography>
+        <Typography variant="caption" display="block" gutterBottom>
+          billet.amaury@gmail.com
+        </Typography>
+      </div>
     </div>
   );
 }

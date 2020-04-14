@@ -5,9 +5,9 @@ import { makeStyles } from "@material-ui/core/styles";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
 import history from "../../history";
-import VoyageBackground from "../../resources/IMG_7952.JPG";
-import Portraitground from "../../resources/IMG_5458.JPG";
-import WildlifeBackground from "../../resources/IMG_2434.jpg";
+import VoyageBackground from "../../resources/galery/trip/IMG_7952.JPG";
+import Portraitground from "../../resources/galery/portrait/IMG_5458.JPG";
+import WildlifeBackground from "../../resources/galery/wildlife/IMG_2434.jpg";
 
 import "./Photography.css";
 

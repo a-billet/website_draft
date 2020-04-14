@@ -4,8 +4,8 @@ import Header from "../Header/Header";
 import "./Home.css";
 import ButtonBase from "@material-ui/core/ButtonBase";
 import Typography from "@material-ui/core/Typography";
-import LeftBackground from "../../resources/HOME_left.jpg";
-import RightBackground from "../../resources/HOME_right.jpg";
+import LeftBackground from "../../resources/galery/trip/IMG_7663.jpg";
+import RightBackground from "../../resources/ABOUT_ME.jpg";
 import history from "../../history";
 
 const images = [
@@ -14,43 +14,43 @@ const images = [
     title: "PHOTOGRAPHY",
     width: "50%",
     height: "93vh",
-    route: "/photography"
+    route: "/photography",
   },
   {
     url: `url(${RightBackground})`,
     title: "ABOUT ME",
     width: "50%",
     height: "93vh",
-    route: "/about"
-  }
+    route: "/about",
+  },
 ];
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
     minWidth: 300,
-    width: "100%"
+    width: "100%",
   },
   image: {
     position: "relative",
     height: 200,
     [theme.breakpoints.down("xs")]: {
       width: "100% !important", // Overrides inline-style
-      height: 100
+      height: 100,
     },
     "&:hover, &$focusVisible": {
       zIndex: 1,
       "& $imageBackdrop": {
-        opacity: 0.15
+        opacity: 0.15,
       },
       "& $imageMarked": {
-        opacity: 0
+        opacity: 0,
       },
       "& $imageTitle": {
-        border: "4px solid currentColor"
-      }
-    }
+        border: "4px solid currentColor",
+      },
+    },
   },
   focusVisible: {},
   imageButton: {
@@ -62,7 +62,7 @@ const useStyles = makeStyles(theme => ({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    color: theme.palette.common.white
+    color: theme.palette.common.white,
   },
   imageSrc: {
     position: "absolute",
@@ -71,7 +71,7 @@ const useStyles = makeStyles(theme => ({
     top: 0,
     bottom: 0,
     backgroundSize: "cover",
-    backgroundPosition: "center 40%"
+    backgroundPosition: "center 40%",
   },
   imageBackdrop: {
     position: "absolute",
@@ -81,12 +81,13 @@ const useStyles = makeStyles(theme => ({
     bottom: 0,
     backgroundColor: theme.palette.common.black,
     opacity: 0.4,
-    transition: theme.transitions.create("opacity")
+    transition: theme.transitions.create("opacity"),
   },
   imageTitle: {
     position: "relative",
-    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${theme.spacing(1) +
-      6}px`
+    padding: `${theme.spacing(2)}px ${theme.spacing(4)}px ${
+      theme.spacing(1) + 6
+    }px`,
   },
   imageMarked: {
     height: 3,
@@ -95,8 +96,8 @@ const useStyles = makeStyles(theme => ({
     position: "absolute",
     bottom: -2,
     left: "calc(50% - 9px)",
-    transition: theme.transitions.create("opacity")
-  }
+    transition: theme.transitions.create("opacity"),
+  },
 }));
 
 function Home() {
@@ -107,7 +108,7 @@ function Home() {
     <div className={classes.root}>
       <Header title={title} />
       <div className={classes.root}>
-        {images.map(image => (
+        {images.map((image) => (
           <ButtonBase
             focusRipple
             key={image.title}
@@ -115,14 +116,14 @@ function Home() {
             focusVisibleClassName={classes.focusVisible}
             style={{
               width: image.width,
-              height: image.height
+              height: image.height,
             }}
             onClick={() => history.push(image.route)}
           >
             <span
               className={classes.imageSrc}
               style={{
-                backgroundImage: image.url
+                backgroundImage: image.url,
               }}
             />
             <span className={classes.imageBackdrop} />
