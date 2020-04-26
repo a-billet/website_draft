@@ -40,12 +40,10 @@ function Potrait() {
                     alt={tile.title}
                     src={tile.img}
                     openText={tile.title}
-                    //style={{ width: "30em", height: "20em" }}
-                    style={{ width: "100%" }}
+                    style={{ height: 400 }}
                   />
                 </picture>
               </Zoom>
-              <figcaption>{tile.title}</figcaption>
             </GridListTile>
           ))}
         </GridList>

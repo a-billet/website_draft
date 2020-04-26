@@ -3,6 +3,7 @@ import Header from "../Header/Header";
 import { makeStyles } from "@material-ui/core/styles";
 import GridList from "@material-ui/core/GridList";
 import GridListTile from "@material-ui/core/GridListTile";
+import Zoom from "react-medium-image-zoom";
 import photos from "./data/trip_photos";
 
 const useStyles = makeStyles((theme) => ({
@@ -16,7 +17,6 @@ const useStyles = makeStyles((theme) => ({
   },
   gridList: {
     width: "70%",
-    //height: 450,
   },
 }));
 
@@ -31,7 +31,16 @@ function Trip() {
         <GridList cellHeight={400} className={classes.gridList} cols={3}>
           {photos.map((tile) => (
             <GridListTile key={tile.img} cols={tile.cols || 1}>
-              <img src={tile.img} alt={tile.title} />
+              <Zoom zoomMargin={40} overlayBgColorEnd="#212121">
+                <picture>
+                  <img
+                    alt={tile.title}
+                    src={tile.img}
+                    openText={tile.title}
+                    style={{ height: 400 }}
+                  />
+                </picture>
+              </Zoom>
             </GridListTile>
           ))}
         </GridList>

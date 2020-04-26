@@ -58,7 +58,7 @@ const photos = [
   },
   {
     img: ana,
-    title: "Ana-Maria looking at the sky",
+    title: "My bitch at the window",
     desc: "Paris",
     cols: 1.5,
   },
